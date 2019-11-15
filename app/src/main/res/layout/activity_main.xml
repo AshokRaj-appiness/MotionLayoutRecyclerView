@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/motion_scene_for_layout"
+    tools:context=".MainActivity">
+
+    <com.github.florent37.shapeofview.shapes.ArcView
+        android:id="@+id/header"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:elevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:shape_arc_height="26dp"
+        app:shape_arc_position="bottom">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/unnamed"
+            android:scaleType="centerCrop"
+            android:alpha="0.7" />
+
+    </com.github.florent37.shapeofview.shapes.ArcView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_dummy_recyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="23dp"
+        android:elevation="4dp"
+        android:gravity="center_vertical|start"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"
+        android:text="I love Nature"
+        android:textColor="@android:color/white"
+        app:fontFamily="cursive" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
